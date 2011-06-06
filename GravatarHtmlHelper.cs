@@ -45,7 +45,7 @@
 
 		private static string GetGravatar(string email)
 		{
-			return string.Format("http://www.gravatar.com/avatar/{0}", Hash(email));
+			return string.Format("http://www.gravatar.com/avatar/{0}", GetHash(email));
 		}
 
 		private static string GetGravatar(string email, object gravatarAttributes)
@@ -73,15 +73,15 @@
 			return uriBuilder.ToString();
 		}
 
-		private static string Hash(string Value)
+		private static string GetHash(string email)
 		{
 			var cryptoProvider = new MD5CryptoServiceProvider();
 
-			byte[] valueArray = Encoding.ASCII.GetBytes(Value);
-			valueArray = cryptoProvider.ComputeHash(valueArray);
+			byte[] bytes = Encoding.ASCII.GetBytes(email);
+			bytes = cryptoProvider.ComputeHash(bytes);
 			
 			var hashBuilder = new StringBuilder();
-			foreach (var value in valueArray)
+			foreach (var value in bytes)
 				hashBuilder.Append(value.ToString("x2").ToLower());
 
 			return hashBuilder.ToString();
