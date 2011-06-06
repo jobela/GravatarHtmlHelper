@@ -1,0 +1,19 @@
+GRAVATARHTMLHELPER
+
+A HtmlHelper extension method for ASP.NET MVC
+
+Standard:
+
+<%= Html.Gravatar("recipient@domain.com") %>
+
+With gravatar attributes:
+
+<%= Html.Gravatar("recipient@domain.com", new { s = "90", d = "mm" } )%>
+
+With html attributes:
+
+<%= Html.Gravatar("recipient@domain.com", null, new { style = "border:1px solid #000" } )%>  
+
+With gravatar and html attributes:
+
+<%= Html.Gravatar("recipient@domain.com", new { s = "90", d = "mm" }, new { style = "border:1px solid #000" } )%>
