@@ -1,4 +1,4 @@
-﻿﻿namespace System.Web.Helpers
+﻿namespace System.Web.Helpers
  {
 	 using System.Collections.Generic;
 	 using System.Security.Cryptography;
@@ -38,6 +38,7 @@
 
 			 var tagBuilder = new TagBuilder("img");
 			 tagBuilder.MergeAttribute("src", source);
+			 tagBuilder.MergeAttribute("alt", "Gravatar");
 			 tagBuilder.MergeAttributes(attributes);
 
 			 return new HtmlString(tagBuilder.ToString(TagRenderMode.SelfClosing));
