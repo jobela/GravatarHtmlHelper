@@ -1,0 +1,10 @@
+obj/
+bin/
+*.user
+*.vspscc
+*.vssscc
+deploy
+deploy/*
+*.suo
+*.cache
+Properties/
