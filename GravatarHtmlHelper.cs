@@ -28,7 +28,7 @@
 		/// Returns a gravatar as an &lt;img /&gt;
 		/// </summary>
 		/// <param name="email">Email for the Gravatar</param>
-		/// <param name="gravatarAttributes">An object that contains the Gravatar attributes for the element. ( s for size i pixels (default = 80), r for rating (default = G)) - http://nb.gravatar.com/site/implement/images/ </param>
+		/// <param name="gravatarAttributes">An object that contains the Gravatar attributes for the element. (http://gravatar.com/site/implement/images/) </param>
 		public static HtmlString Gravatar(this HtmlHelper html, string email, object gravatarAttributes)
 		{
 			return GetImage(GetGravatar(html, email, gravatarAttributes));
@@ -38,7 +38,7 @@
 		/// Returns a gravatar as an &lt;img /&gt;
 		/// </summary>
 		/// <param name="email">Email for the Gravatar</param>
-		/// <param name="gravatarAttributes">An object that contains the Gravatar attributes for the element. ( s for size i pixels (default = 80), r for rating (default = G)) - http://nb.gravatar.com/site/implement/images/ </param>
+		/// <param name="gravatarAttributes">An object that contains the Gravatar attributes for the element. (http://gravatar.com/site/implement/images/) </param>
 		/// <param name="htmlAttributes">An object that contains the HTML attributes for the element.</param>
 		public static HtmlString Gravatar(this HtmlHelper html, string email, object gravatarAttributes, object htmlAttributes)
 		{
